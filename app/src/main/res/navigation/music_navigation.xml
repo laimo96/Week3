@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/ClassicMusicFragment"
+    android:id="@+id/music_navigation">
+
+    <fragment
+        android:id="@+id/ClassicMusicFragment"
+        android:name="com.example.week3.ui.ClassicFragment"
+        tools:layout="@layout/fragment_classic"
+        android:label="Classical Music">
+        <action
+            android:id="@+id/action_ClassicMusicFragment_to_RockMusicFragment"
+            app:destination="@id/RockMusicFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PopMusicFragment"
+        android:name="com.example.week3.ui.PopFragment"
+        tools:layout="@layout/fragment_pop"
+        android:label="Pop Music">
+    </fragment>
+
+    <fragment
+        android:id="@+id/RockMusicFragment"
+        android:name="com.example.week3.ui.RockFragment"
+        tools:layout="@layout/fragment_rock"
+        android:label="Rock Music">
+        <action
+            android:id="@+id/action_RockMusicFragment_to_PopMusicFragment"
+            app:destination="@id/PopMusicFragment" />
+    </fragment>
+
+</navigation>
